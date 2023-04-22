@@ -1,0 +1,8 @@
+
+.write-content {
+    width: 100%;
+    margin-top: 10px;
+    padding:var(--box-padding);
+    background-color: var(--box-color);
+    border-radius: var(--box-radius);
+}

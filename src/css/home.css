@@ -1,0 +1,8 @@
+
+.home-content {
+    margin-top: 10px;
+    width: 100%;
+    padding:var(--box-padding);
+    background-color: var(--box-color);
+    border-radius: var(--box-radius);
+}
