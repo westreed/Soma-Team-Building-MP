@@ -38,8 +38,8 @@ function TestPage (){
     // 데이터 가져오기
     const getData = async(e) => {
         e.preventDefault();
-        await dbService.collection('test').get().then((docs) => {
-            const tempArray = docs.docs.map((doc) => {
+        await testCollection.get().then((res) => {
+            const tempArray = res.docs.map((doc) => {
                 console.log(doc.id); // 문서이름은 이렇게 조회할 수 있음.
                 return "id:" + doc.id + " / data:" + doc.data().value.toString();
             })
