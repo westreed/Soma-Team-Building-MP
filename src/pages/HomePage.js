@@ -12,8 +12,8 @@ function HomePage(){
     const postsCollection = dbService.collection('Posts');
 
     useEffect(() => {
-        postsCollection.orderBy("createDate", "desc").onSnapshot((snapshot) => {
-            const postArray = snapshot.docs.map(doc => ({
+        postsCollection.orderBy("createDate", "desc").get().then((res) => {
+            const postArray = res.docs.map(doc => ({
                 ...doc.data()
             }));
             setPosts(postArray);
