@@ -10,4 +10,15 @@ npm install
 
 ## 파이어베이스 사용
 
-추후 작성
+팀빌딩 게시글 양식은 아래와 같습니다.
+
+```bash
+{
+  teamname: "팀이름",
+  username: "유저이름",
+  title: "제목",
+  content: "내용",
+  password: "비밀번호",
+  createDate: "Unix Time 값"
+}
+```
