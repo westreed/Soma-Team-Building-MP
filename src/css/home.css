@@ -1,8 +1,15 @@
 
 .home-content {
     margin-top: 10px;
-    width: 100%;
     padding:var(--box-padding);
-    background-color: var(--box-color);
-    border-radius: var(--box-radius);
+    font-weight: bold;
+}
+
+.home-post {
+    max-width: 370px;
+    margin-top: 10px;
+    border: 2px solid #e8e8e8;
+    background-color: white;
+    padding: var(--box-padding);
+    border-radius: 5px;
 }

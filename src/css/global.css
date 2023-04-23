@@ -1,10 +1,16 @@
 html, body, #root {
     width: 100%;
     height: 100%;
-    background-color: #95BDFF;
-    --box-color: #fcfcf3;
+    --point-color1: #f4f4f4;
+    --point-color2: #006eb7;
+    --point-color3: #394867;
+    --point-color4: #212A3E;
+    --point-color5: #9BA4B5;
+    --box-color: var(--point-color2);
+    --box-font-color: var(--point-color1);
     --box-radius: 10px;
     --box-padding: 10px;
+    background-color: var(--point-color1);
 }
 
 p {
@@ -17,4 +23,15 @@ p {
     margin: 0 auto;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.button-style {
+    border: none;
+    border-radius: calc(var(--box-radius)*2);
+    padding: 7px 14px 7px 14px;
+    transition: all 0.5s;
+}
+
+.button-style:hover {
+    background-color: var(--point-color5);
 }
