@@ -20,7 +20,7 @@ function HomePage(){
             setCount(postArray.length);
             setLoading(true);
         })
-    }, [postsCollection]);
+    }, []);
 
     return (
         <div style={{height:"100%"}}>
