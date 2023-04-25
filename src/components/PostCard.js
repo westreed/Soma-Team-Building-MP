@@ -9,7 +9,7 @@ export default function PostCard({data}) {
         <div style={{display:"flex", justifyContent:"space-between", flexWrap: "wrap", marginTop:"auto", alignItems:"center"}}>
             <div className="postcard-footer">
                 <p className="postcard-team">{data.teamname}</p>
-                <p className="postcard-leader">{data.username}</p>
+                <p className="postcard-user">{data.username}</p>
             </div>
             <p className="postcard-time">{moment(data.createDate.seconds * 1000).format('YYYY.MM.DD. HH:mm')}</p>
         </div>
