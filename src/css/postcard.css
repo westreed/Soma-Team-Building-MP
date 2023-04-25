@@ -56,10 +56,10 @@
   -webkit-line-clamp: 1;
 }
 
-.postcard-leader {
+.postcard-user {
   font-size: 0.75rem;
   text-align: center;
-  margin-left: 4px;
+  margin-left: 8px;
   font-weight: 500;
   overflow: hidden;
   display: -webkit-box;
