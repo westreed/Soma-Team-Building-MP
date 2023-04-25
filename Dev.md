@@ -27,7 +27,7 @@ npm install
   title: "제목",
   content: "내용",
   password: "비밀번호",
-  createDate: "Unix Time 값"
+  createDate: "firestore Timestamp" // TestPage 예제참고
 }
 ```
 
