@@ -22,6 +22,7 @@ function HomePage() {
         setPosts(postArray);
         setCount(postArray.length);
         setLoading(true);
+        console.log(postArray)
       });
   }, []);
 

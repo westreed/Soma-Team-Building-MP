@@ -4,11 +4,12 @@
 
 .post-heading {
   margin-top: 50px;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 .post-form {
-  margin-top: 50px;
+  margin-top: 20px;
   padding-bottom: 100px;
 }
 
