@@ -1,0 +1,81 @@
+.postcard-wrap {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+}
+
+.postcard-container {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  height: 130px;
+  border: 2px solid #e8e8e8;
+  background-color: white;
+  padding: var(--box-padding);
+  border-radius: var(--box-radius);
+}
+
+.postcard-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.postcard-content {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #000;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.postcard-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.postcard-team {
+  background-color: var(--box-color);
+  color:white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 4px 10px;
+}
+
+.postcard-leader {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-left: 4px;
+  font-weight: 500;
+}
+
+.postcard-time {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-right: 4px;
+  font-weight: 500;
+  color:var(--point-color5);
+}
+
+@media screen and (max-width: 1300px) {
+  .postcard-container {
+    width: 45vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .postcard-wrap {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .postcard-container {
+    width: 90vw;
+  }
+}

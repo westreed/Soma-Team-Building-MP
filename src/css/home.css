@@ -1,15 +1,5 @@
-
 .home-content {
-    margin-top: 10px;
-    padding:var(--box-padding);
-    font-weight: bold;
-}
-
-.home-post {
-    max-width: 370px;
-    margin-top: 10px;
-    border: 2px solid #e8e8e8;
-    background-color: white;
-    padding: var(--box-padding);
-    border-radius: 5px;
+  margin-top: 10px;
+  padding: var(--box-padding);
+  font-weight: bold;
 }

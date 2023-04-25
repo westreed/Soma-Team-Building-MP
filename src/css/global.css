@@ -28,10 +28,12 @@ p {
 .button-style {
     border: none;
     border-radius: calc(var(--box-radius)*2);
-    padding: 7px 14px 7px 14px;
-    transition: all 0.5s;
+    background-color: #fff;
+    padding: 7px 14px;
+    transition: all 0.2s;
 }
 
 .button-style:hover {
-    background-color: var(--point-color5);
+    filter:brightness(120%);
+    transform: translateY(-2px);
 }
