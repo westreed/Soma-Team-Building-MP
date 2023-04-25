@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import '../css/post-page.css';
+import '../css/write.css';
 import { dbService } from '../firebase';
 import { Timestamp } from '@firebase/firestore';
 import { useNavigate } from 'react-router';
 
-function PostPage() {
+function WritingPage() {
   const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState('');
   const [input, setInput] = useState({});
@@ -51,12 +51,12 @@ function PostPage() {
   };
 
   return (
-    <div className='post-container'>
-      <h1 className='post-heading'>게시물 작성</h1>
-      <form className='post-form' onSubmit={submitHandler}>
-        <label className='post-form__label'>비밀번호</label>
+    <div className='writing__container'>
+      <h1 className='writing__heading'>게시물 작성</h1>
+      <form className='writing__form' onSubmit={submitHandler}>
+        <label className='writing__label'>비밀번호</label>
         <input
-          className='post-form__input'
+          className='writing__input'
           required
           type='password'
           name='password'
@@ -66,9 +66,9 @@ function PostPage() {
           maxLength={8}
           onChange={inputHandler}
         />
-        <label className='post-form__label'>팀명</label>
+        <label className='writing__label'>팀명</label>
         <input
-          className='post-form__input'
+          className='writing__input'
           required
           placeholder='팀명을 알려주세요!'
           type='text'
@@ -76,9 +76,9 @@ function PostPage() {
           value={input.teamname ?? ''}
           onChange={inputHandler}
         />
-        <label className='post-form__label'>작성자</label>
+        <label className='writing__label'>작성자</label>
         <input
-          className='post-form__input'
+          className='writing__input'
           required
           placeholder='작성자님의 이름을 알려주세요!'
           type='text'
@@ -86,9 +86,9 @@ function PostPage() {
           value={input.username ?? ''}
           onChange={inputHandler}
         />
-        <label className='post-form__label'>제목</label>
+        <label className='writing__label'>제목</label>
         <input
-          className='post-form__input'
+          className='writing__input'
           required
           placeholder='연수생들의 이목을 끌어보세요!'
           type='text'
@@ -96,16 +96,16 @@ function PostPage() {
           value={input.title ?? ''}
           onChange={inputHandler}
         />
-        <label className='post-form__label'>내용</label>
+        <label className='writing__label'>내용</label>
         <textarea
-          className='post-form__text-area'
+          className='writing__text-area'
           required
           placeholder='어떤 팀원을 구하는지 자세히 적어보세요!'
           name='content'
           value={input.content ?? ''}
           onChange={inputHandler}
         ></textarea>
-        <button className='post-form__btn' disabled={loading}>
+        <button className='writing__btn' disabled={loading}>
           작성완료
         </button>
       </form>
@@ -113,4 +113,4 @@ function PostPage() {
   );
 }
 
-export default PostPage;
+export default WritingPage;
