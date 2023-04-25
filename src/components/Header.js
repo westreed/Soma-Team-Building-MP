@@ -8,7 +8,7 @@ function Header(){
         <div className="soma-header" style={{display:"flex", flexDirection:"row", justifyContent:"space-between", flexWrap: "wrap"}}>
             <div>
                 <nav style={{display:"flex", flexDirection:"row"}}>
-                    <img src={Logo} alt="Logo" style={{ objectFit:"contain"}} width="100px" />
+                    <img src={Logo} alt="SW마에스트로 로고" style={{ objectFit:"contain"}} width="100px" />
                     <p className='soma-title'>SomaHub</p>
                 </nav>
                 <div className='soma-header-title'>
@@ -20,7 +20,7 @@ function Header(){
                     <button className='button-style'>글쓰러 가기 →</button>
                 </div>
             </div>
-            <img src={Title} alt="Title" style={{ objectFit:"contain", maxWidth: '500px', width: '100%'}} />
+            <img src={Title} alt="SW마에스트로" style={{ objectFit:"contain", maxWidth: '500px', width: '100%'}} />
         </div>
     );
 }

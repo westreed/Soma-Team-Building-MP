@@ -18,11 +18,12 @@
 .soma-header-title {
     margin-top: 2rem;
     color: var(--point-color1);
-    font-size: 2em;
     font-weight: bold;
+    font-size: 2rem;
 }
 
 .soma-header-content {
     margin-top: 1.5rem;
+    font-weight: semi-bold;
     color: var(--point-color1);
 }
