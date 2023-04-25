@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { dbService } from '../firebase';
+import { Timestamp } from 'firebase/firestore';
 
 function TestPage (){
     const [data, setData] = useState([]);
@@ -15,8 +16,10 @@ function TestPage (){
         // 이건 문서를 따로 지정하지 않고, 특정 콜렉션에 데이터를 추가하는 방법.
         // 문서이름을 지정하지 않았기 때문에 문서이름이 유니크한 랜덤값으로 지정됨.
         await testCollection.add({
+            // {필드이름} : {값} 구조
             key:"id",
-            value:Math.floor(Math.random() * 100) + 1
+            value:Math.floor(Math.random() * 100) + 1,
+            date:Timestamp.fromDate(new Date()) // 현재 시간 생성
         }).then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
         }).catch((error) => {
@@ -41,7 +44,7 @@ function TestPage (){
         await testCollection.get().then((res) => {
             const tempArray = res.docs.map((doc) => {
                 console.log(doc.id); // 문서이름은 이렇게 조회할 수 있음.
-                return "id:" + doc.id + " / data:" + doc.data().value.toString();
+                return "id:" + doc.id + " / value:" + doc.data().value.toString() + " / date:" + doc.data().date.toString();
             })
             setData(tempArray);
             console.log(tempArray);
