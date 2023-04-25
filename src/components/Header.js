@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 
 function Header() {
   const navigate = useNavigate();
-  const clickHandler = () => navigate('/post');
+  const clickHandler = () => navigate('/write');
   
   return (
     <div
