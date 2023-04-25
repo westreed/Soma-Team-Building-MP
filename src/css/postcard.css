@@ -7,8 +7,8 @@
 
 .postcard-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  width: 35vw;
   height: 130px;
   border: 2px solid #e8e8e8;
   background-color: white;
@@ -66,16 +66,8 @@
   color:var(--point-color5);
 }
 
-@media screen and (max-width: 1300px) {
-  .postcard-container {
-    width: 45vw;
-  }
-}
 @media screen and (max-width: 700px) {
   .postcard-wrap {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .postcard-container {
-    width: 90vw;
   }
 }
