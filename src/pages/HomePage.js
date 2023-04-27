@@ -3,6 +3,7 @@ import { dbService } from '../firebase';
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import PostCard from '../components/PostCard';
+import Footer from '../components/Footer';
 
 function HomePage() {
   const [loading, setLoading] = useState(false);
@@ -41,6 +42,7 @@ function HomePage() {
           <PostCard key={idx} data={data} />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 }
