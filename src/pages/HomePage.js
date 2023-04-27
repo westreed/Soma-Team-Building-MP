@@ -11,20 +11,18 @@ function HomePage() {
   const [posts, setPosts] = useState([]);
   const postsCollection = dbService.collection("Posts");
 
-  console.log(posts);
-
   useEffect(() => {
     postsCollection
       .orderBy("createDate", "desc")
       .get()
       .then((res) => {
         const postArray = res.docs.map((doc) => ({
+          "id":doc.id,
           ...doc.data(),
         }));
         setPosts(postArray);
         setCount(postArray.length);
         setLoading(true);
-        console.log(postArray);
       });
   }, []);
 
