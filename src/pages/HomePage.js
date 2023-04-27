@@ -26,8 +26,8 @@ function HomePage() {
   }, []);
 
   return (
-    <div style={{ height: '100%'}}>
-      <Header />
+    <div>
+      <Header/>
       <div className='home-content'>
         <p style={{ fontSize: '0.8rem', color: 'var(--point-color2)' }}>
           현재 게시글 {count}개
