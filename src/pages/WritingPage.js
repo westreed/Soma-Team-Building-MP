@@ -13,6 +13,7 @@ function WritingPage() {
 
   const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
+  const [docId, setDocId] = useState(false);
   const [input, setInput] = useState({});
   const [isEdit, setIsEdit] = useState(false);
 
@@ -66,8 +67,10 @@ function WritingPage() {
 
   //Post를 업데이트 하는 함수
   const updatePost = async (data) => {
+    console.log("updatePost", data);
     await collection
-      .updatePost(data)
+      .doc(docId)
+      .set(data)
       .then(() => {
         setInput({});
         setPassword("");
@@ -83,13 +86,14 @@ function WritingPage() {
   useEffect(() => {
     if (editContent) {
       setIsEdit(true);
+      setDocId(editContent.id);
       setPassword(editContent.password);
       setInput({
         content: editContent.content,
         teamname: editContent.teamname,
         title: editContent.title,
         username: editContent.username,
-        createDate: editContent.createDate,
+        createDate: Timestamp.fromMillis(editContent.createDate.seconds*1000),
       });
     }
   }, []);
