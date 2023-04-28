@@ -26,6 +26,11 @@ function HomePage() {
       });
   }, []);
 
+  const deletePostHandler = (postId) => {
+    const updatedPosts = posts.filter((post) => post.id !== postId);
+    setPosts(updatedPosts);
+  };
+
   return (
     <div>
       <Header />
@@ -39,7 +44,7 @@ function HomePage() {
       </div>
       <div className="postcard__wrapper">
         {posts.map((data, idx) => (
-          <PostCard key={idx} data={data} />
+          <PostCard key={idx} data={data} deletePostHandler={deletePostHandler} />
         ))}
       </div>
       <Footer />
